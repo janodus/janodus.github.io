@@ -95,17 +95,6 @@ search.addWidget(
   })
 );
 
-// CLEAR ALL WIDGET
-search.addWidget(
-  instantsearch.widgets.clearAll({
-    container: '#clear-all',
-    templates: {
-      link: 'Reset everything'
-    },
-    autoHideContainer: false
-  })
-);
-
 //======================
 // UTILITY FUNCTIONS
 //======================

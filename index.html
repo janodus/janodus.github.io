@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Cool places to eat! - by Algolia</title>
+    <title>Cool places to eat!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -30,7 +30,7 @@
     <div class="row">
       <div id="jv-search-header" class="col-md-12">
           <!-- SEARCH BOX HERE -->
-          <div id="jv-search-box"><div id="clear-all"></div></div>
+          <div id="jv-search-box"></div>
       </div>
     </div>
   
@@ -71,7 +71,10 @@
           <div class="col-sm-10 col-md-11 col-lg-11 hit-content-container">
             <div class="hit-content">
               <h3 class="hit-name black" >{{name}}</h3>
-              <p><h5>{{stars_count}} stars - ({{reviews_count}} Reviews)</h5></p>
+              <p>
+                <h5><span class="golden">{{stars_count}} stars</span> - <span class="grayed">({{reviews_count}} Reviews)
+                </span></h5>
+              </p>
               <h5 class="hit-information grayed"> {{{_highlightResult.food_type.value}}} | {{{_highlightResult.neighborhood.value}}} | ${{price_range}}</h5> <!-- This was just price before -->
             </div>
           </div>

@@ -10,15 +10,17 @@ html, body {
 /* ------------------
 CONTAINERS 
 ------------------ */
+#jv-spacer-div {
+	min-height: 100px;
+}
 
 #jv-content-container {
 	background: white;
 	min-height: 517px;
 	max-width: 820px;
-}
-
-#jv-spacer-div {
-	min-height: 100px;
+	-webkit-box-shadow: -1px 2px 16px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 16px -4px rgba(0,0,0,0.75);
+	box-shadow: -1px 2px 16px -4px rgba(0,0,0,0.75);
 }
 
 #jv-search-header {
@@ -26,6 +28,10 @@ CONTAINERS
 	height: 80px;
 	padding-top: 18px;
 	margin: auto;
+}
+
+#jv-search-box input{
+	/* no need to set padding-left */
 }
 
 #jv-left-column {
@@ -51,15 +57,6 @@ ELEMENTS / SEARCH BOX
 	border-radius: 5px;
 	outline: none;
 	border: 1px solid #D6D6D6;
-}
-
-img {
-	height: 80px;
-	width: 80px;
-}
-
-.no-decoration {
-text-decoration:none;
 }
 
 /* ------------------
@@ -89,23 +86,25 @@ HITS
 	line-height: ;
 }
 
+img {
+	height: 80px;
+	width: 80px;
+}
+
 
 /* ------------------
 MENU (Cuisine / Food Type)
 ------------------ */
 
-/* MENU ITEM DIV STYLE (container div for menu list) */
 .ais-menu--list {
 	margin-bottom: 25px;
 }
 
-/* MENU ITEM DIV COLOR :HOVER */
 .ais-menu--list div:hover {
 	background: #2897C5;
 	border-radius: 5px;
 }
 
-/* MENU ITEM TEXT COLOR :HOVER */
 .ais-menu--list div:hover div a {
 	color:white;
 }
@@ -139,7 +138,7 @@ MENU (Cuisine / Food Type)
 
 .ais-menu-count {
 	padding-right: 6px;
-	padding-top: 3px;
+	padding-top: 2px;
 }
 
 a.ais-menu-link {
@@ -164,7 +163,7 @@ STATS
 	content: " ";
 	display: inline-block;
 	background:blue;
-	width: 380px;
+	width: 395px;
 	height: 0;
 	margin-left: 20px;
 	border-bottom: 2px solid #E6E6E6;
@@ -177,28 +176,34 @@ PAGINATION
 ------------------ */
 
 .ais-pagination{
-	margin-top: 10px;
+	margin-top: 5px;
 	margin-bottom: 15px;
 }
 
 .ais-pagination--link {
 	border: 2px solid #E6E6E6;
+	width:170px;
 	font-size: 14px;
 	color: #000000 ;
 	border-radius: 5px;
-	padding: 10px 45px;
-	position:relative;
-	left: 15px;
-}
-
-.ais-pagination--item__active {
-	display: none;
+	padding: 10px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	right: 28px;
 }
 
 .ais-pagination--link:hover {
 	text-decoration: none;
 	color: #000000;
 }
+
+.ais-pagination--item__active {
+	display: none;
+}
+
 
 /* ------------------
 STARS
@@ -244,8 +249,11 @@ AUXILARY STYLES
 ------------------ */
 
 .grayed {
-	font-weight: normal;
 	color: #A5A5A5;
+}
+
+.golden {
+	color: #F2A365;
 }
 
 .black {
@@ -259,4 +267,10 @@ AUXILARY STYLES
 .dont-show {
 	display:none;
 }
+
+.no-decoration {
+text-decoration:none;
+}
+
+
 
