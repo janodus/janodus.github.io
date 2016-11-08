@@ -4,6 +4,7 @@
 html, body {
 	height: 100% ;
 	background-image: url(../../resources/graphics/background.png);
+	font-family: 'Open Sans', sans-serif;
 }
 
 /* ------------------
@@ -163,7 +164,7 @@ STATS
 	content: " ";
 	display: inline-block;
 	background:blue;
-	width: 390px;
+	width: 380px;
 	height: 0;
 	margin-left: 20px;
 	border-bottom: 2px solid #E6E6E6;
@@ -199,12 +200,43 @@ PAGINATION
 	color: #000000;
 }
 
+/* ------------------
+STARS
+------------------ */
+
+.ais-star-rating--list {
+    padding-left: 7px;
+}
+
 .ais-star-rating--star {
 	padding-left: 12px;
 }
 
 .ais-star-rating--star__empty {
 	padding-left: 12px;
+}
+
+.star-class, .empty-star-class {
+	height: 15px;
+	width: 15px;
+	margin: 1px 2px;
+	background-size: cover;
+}
+
+.star-class::before {
+	content: none !important;
+}
+
+.empty-star-class::before {
+	content: none !important;
+}
+
+.star-class {
+	background-image: url(../../resources/graphics/stars-plain.png);
+}
+
+.empty-star-class {
+	background-image: url(../../resources/graphics/star-empty.png);
 }
 
 /* ------------------
@@ -227,8 +259,4 @@ AUXILARY STYLES
 .dont-show {
 	display:none;
 }
-
-
-
-
 

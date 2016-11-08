@@ -17,7 +17,7 @@ var search = instantsearch({
 // WIDGETS
 //======================
 
-// SEARCH WIDGET
+// SEARCH
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#jv-search-box',
@@ -25,7 +25,7 @@ search.addWidget(
   })
 );
 
-// HITS WIDGET
+// HITS
 search.addWidget(
   instantsearch.widgets.hits({
     container: '#hits',
@@ -75,11 +75,11 @@ search.addWidget(
   })
 );
 
-//STARS (RATING) WIDGET 
+// STARS (RATING) WIDGET 
 search.addWidget(
   instantsearch.widgets.starRating({
     container: '#stars',
-    attributeName: 'stars_count',
+    attributeName: 'stars_count', 
     max: 5,
     templates: {
       header: '<h5>Rating</h5>'
@@ -89,7 +89,20 @@ search.addWidget(
     }, 
         cssClasses: {
     count: 'dont-show',
+    star: 'star-class',
+    emptyStar: 'empty-star-class',
     },
+  })
+);
+
+// CLEAR ALL WIDGET
+search.addWidget(
+  instantsearch.widgets.clearAll({
+    container: '#clear-all',
+    templates: {
+      link: 'Reset everything'
+    },
+    autoHideContainer: false
   })
 );
 
